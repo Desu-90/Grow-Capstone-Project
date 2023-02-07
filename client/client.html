@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+  <script src="../src/main.js"></script>
+  <script src="../anime-master/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   <title>Grow</title>
   <style>
     html,
+    
     body {
       height: 100%;
       width: 100%;
@@ -24,9 +28,16 @@
     #content {
       text-align: center;
     }
+    div {
+    width: 100px;
+    height: 100px;
+    opacity: .5;
+    left: 100px;
+    background-color: red;
+  }
   </style>
   <script>
-    /*const init = () => {
+    const init = () => {
       const button1 = document.querySelector("#Button1");
       const button2 = document.querySelector("#Button2");
       const button3 = document.querySelector("#Button3");
@@ -44,13 +55,16 @@
     };
 
     window.onload = init;
-    */
+    
   </script>
 </head>
 
 <body>
+  
   <section id="top">
     <h1>Homepage</h1>
+    <div>
+    </div>
     <button id="Button1">Button1</button>
     <button id="Button2">Button2</button>
     <button id="button3">Button 3</button>
