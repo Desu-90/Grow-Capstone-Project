@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Glass</h1>  
-    </main>
-	<script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bloom</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
+  <script src="/src/drag.js"></script>
+</head>
+
+<body>
+  <main>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <div class="p-5 is-size-3">Step 2: Fill your Vase</div>
+          <span class="icon-text">
+            <button id="restart" class="m-5 button is-rounded">
+              <span class="icon mr-1">
+                <i class="fas fa-arrow-rotate-left"></i>
+              </span><a href="app.html">Restart</a></button>
+          </span>
+          <span class="icon-text">
+            <button class="button is-rounded">
+              <span class="icon mr-1">
+                <i class="fas fa-delete-left"></i>
+              </span>Undo</button>
+          </span>
+        </a>
+      </div>
+    </nav>
+    <section class="hero is-link is-fullheight-with-navbar">
+      <div class="columns">
+        <div class="column p-5 m-5 is-one-third">
+          <span class="icon is-large mr-1 has-background-primary">
+            <i class="fas fa-fan has"></i>
+            <div>Flower</div>
+          </span>
+        </div>
+        <div class="column has-background-primary">
+          <figure class="image">
+            <img id="glass" src="/assets/glass.png">
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

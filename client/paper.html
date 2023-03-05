@@ -7,10 +7,29 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
     <main>
-        <h1>Welcome to My Paper</h1>  
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <div class="p-5 is-size-3">Step 2: Fill your Vase</div>
+            <span class="icon-text">
+              <button class="m-5 button is-rounded">
+                <span class="icon mr-1">
+                  <i class="fas fa-arrow-rotate-left"></i>
+                </span>Restart</button>
+            </span>
+            <span class="icon-text">
+              <button class="button is-rounded">
+                <span class="icon mr-1">
+                  <i class="fas fa-delete-left"></i>
+                </span>Undo</button>
+            </span>
+          </a>
+        </div>
+      </nav>  
     </main>
 	<script src="index.js"></script>
   </body>
