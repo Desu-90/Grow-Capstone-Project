@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-    <main>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            <div class="p-5 is-size-3">Step 2: Fill your Vase</div>
-            <span class="icon-text">
-              <button class="m-5 button is-rounded">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Website</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
+  <script src="/src/drag.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</head>
+
+<body>
+  <main>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <div class="p-5 is-size-3">Step 2: Fill your Vase</div>
+          <span class="icon-text">
+            <a href="app.html">
+              <button id="restart" class="m-5 button is-rounded">
                 <span class="icon mr-1">
                   <i class="fas fa-arrow-rotate-left"></i>
                 </span>Restart</button>
-            </span>
-            <span class="icon-text">
-              <button class="button is-rounded">
-                <span class="icon mr-1">
-                  <i class="fas fa-delete-left"></i>
-                </span>Undo</button>
-            </span>
-          </a>
+            </a>
+          </span>
+          <span class="icon-text">
+            <button class="button is-rounded">
+              <span class="icon mr-1">
+                <i class="fas fa-delete-left"></i>
+              </span>Undo</button>
+          </span>
         </div>
-      </nav>  
-    </main>
-	<script src="index.js"></script>
-  </body>
+      </div>
+    </nav>
+    <div class="example-parent">
+      <h1>To-do list</h1>
+      <div class="example-origin">
+        To-do
+        <div
+          id="draggable-1"
+          class="example-draggable"
+          draggable="true"
+          ondragstart="onDragStart(event);"
+        >
+          thing 1
+        </div>
+        <div
+          id="draggable-2"
+          class="example-draggable"
+          draggable="true"
+          ondragstart="onDragStart(event);"
+        >
+          thing 2
+        </div>
+        <div
+          id="draggable-3"
+          class="example-draggable"
+          draggable="true"
+          ondragstart="onDragStart(event);"
+        >
+          thing 3
+        </div>
+        <div
+          id="draggable-4"
+          class="example-draggable"
+          draggable="true"
+          ondragstart="onDragStart(event);"
+        >
+          thing 4
+        </div>
+      </div>
+    
+      <div
+        class="example-dropzone"
+        ondragover="onDragOver(event);"
+        ondrop="onDrop(event);"
+      >
+        Done
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

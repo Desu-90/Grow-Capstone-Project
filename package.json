@@ -1,0 +1,22 @@
+{
+  "name": "my-capstone-project",
+  "version": "1.0.0",
+  "description": "2023 Capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Desu-90/My-Capstone-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Desu-90/My-Capstone-Project/issues"
+  },
+  "homepage": "https://github.com/Desu-90/My-Capstone-Project#readme",
+  "devDependencies": {
+    "interactjs": "^1.10.17"
+  }
+}
