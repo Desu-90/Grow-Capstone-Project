@@ -1,3 +1,7 @@
+const fs = require('fs');
+const img = fs.readFileSync(`${__dirname}/../assets/paper.png`);
+
+
 function onDragStart(event) {
     event
       .dataTransfer
@@ -23,3 +27,11 @@ function onDragStart(event) {
     .dataTransfer
     .clearData();
   }
+
+  const init = () => {
+    const canvas = document.querySelector("#myCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 10, 10);
+  }
+
+  window.onload = init;
