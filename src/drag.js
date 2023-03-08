@@ -1,5 +1,5 @@
-const fs = require('fs');
-const img = fs.readFileSync(`${__dirname}/../assets/paper.png`);
+// const fs = require('fs');
+// const img = fs.readFileSync(`${__dirname}/../assets/paper.png`);
 
 
 function onDragStart(event) {
@@ -28,10 +28,18 @@ function onDragStart(event) {
     .clearData();
   }
 
-  const init = () => {
-    const canvas = document.querySelector("#myCanvas");
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 10, 10);
+  const initiate = () => {
+    // const canvas = document.querySelector("#myCanvas");
+    // const ctx = canvas.getContext("2d");
+    // ctx.drawImage(img, 10, 10);
+    debugger;
+    const myCanvas = document.getElementById('myCanvas');
+    const ctx = myCanvas.getContext('2d');
+    const img = new Image;
+img.onload = function(){
+  ctx.drawImage(img,0,200, 400, 600 ); // Or at whatever offset you like
+};
+img.src = '../assets/paper.png';
   }
 
-  window.onload = init;
+initiate();

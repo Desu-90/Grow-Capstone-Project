@@ -6,13 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bloom</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
-    <script src="../src/canvas.js"></script>
 </head>
 
 <body>
-    <canvas id="myCanvas" width="400" height="400" style="border: 1px solid #000000"></canvas>
+    <div class="absolute">
+        <div class="row">
+            <div class="column">
+                <div class="parent">
+                    <div class="div1" id="test"><span class="icon is-large mr-1 has-background-primary">
+                            <i class="fas fa-fan has"></i>
+                            <div>Flower</div>
+                        </span> </div>
+                    <div class="div2"><span class="icon is-large mr-1 has-background-primary">
+                            <i class="fas fa-fan has"></i>
+                            <div>Flower</div>
+                        </span> </div>
+                    <div class="div3"><span class="icon is-large mr-1 has-background-primary">
+                            <i class="fas fa-fan has"></i>
+                            <div>Flower</div>
+                        </span> </div>
+                    <div class="div4"><span class="icon is-large mr-1 has-background-primary">
+                            <i class="fas fa-fan has"></i>
+                            <div>Flower</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Draggable DIV -->
+<div id="mydiv">
+    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+    <span class="icon is-large mr-1 has-background-primary">
+        <i class="fas fa-fan has"></i>
+        <div>Flower</div>
+    </span> 
+  </div>
+    <div class="canvas">
+        <img src="../assets/paper.png">
+    </div>
+    <script src="../src/canvas.js"></script>
 </body>
