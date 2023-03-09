@@ -7,44 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bloom</title>
     <link rel="stylesheet" href="style2.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="absolute">
-        <div class="row">
-            <div class="column">
-                <div class="parent">
-                    <div class="div1" id="test"><span class="icon is-large mr-1 has-background-primary">
-                            <i class="fas fa-fan has"></i>
-                            <div>Flower</div>
-                        </span> </div>
-                    <div class="div2"><span class="icon is-large mr-1 has-background-primary">
-                            <i class="fas fa-fan has"></i>
-                            <div>Flower</div>
-                        </span> </div>
-                    <div class="div3"><span class="icon is-large mr-1 has-background-primary">
-                            <i class="fas fa-fan has"></i>
-                            <div>Flower</div>
-                        </span> </div>
-                    <div class="div4"><span class="icon is-large mr-1 has-background-primary">
-                            <i class="fas fa-fan has"></i>
-                            <div>Flower</div>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <div class="p-5 is-size-3">Step 2: Fill your Vase</div>
+            <span class="icon-text">
+              <a href="app.html">
+                <button id="restart" class="m-5 button is-rounded">
+                  <span class="icon mr-1">
+                    <i class="fas fa-arrow-rotate-left"></i>
+                  </span>Restart</button>
+              </a>
+            </span>
+            <span class="icon-text">
+              <button class="button is-rounded">
+                <span class="icon mr-1">
+                  <i class="fas fa-delete-left"></i>
+                </span>Undo</button>
+            </span>
+          </div>
         </div>
-    </div>
+      </nav>
     <!-- Draggable DIV -->
-<div id="mydiv">
-    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-    <span class="icon is-large mr-1 has-background-primary">
-        <i class="fas fa-fan has"></i>
-        <div>Flower</div>
-    </span> 
-  </div>
+    <div id="options">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <span id="rose">
+            <img id="icon" src="../assets/rose.png">
+            <p>Rose</p>
+        </span>
+        <span id="tulip">
+            <img id="icon" src="../assets/tulip.png">
+            <p>Tulip</p>
+        </span>
+        <span id="daisy">
+            <img id="icon" src="../assets/daisy.png">
+            <p>Daisy</p>
+        </span>
+        <span id="poppy">
+            <img id="icon" src="../assets/poppy.png">
+            <p>Poppy</p>
+        </span>
+        <span id="lily">
+            <img id="icon" src="../assets/lily.png">
+            <p>Lily</p>
+        </span>
+
+    </div>
+    <!-- <div class="layer"></div> -->
     <div class="canvas">
         <img src="../assets/paper.png">
     </div>
