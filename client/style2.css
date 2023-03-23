@@ -3,8 +3,12 @@
   top: 80px;
 }
 
-.canvas {
-  position: absolute;
+.content-box {
+  columns: 3 auto;
+}
+
+#canvas {
+  width: 400px;
   left: 500px;
   top: 150px;
 }
@@ -32,6 +36,7 @@
   text-align: center;
   cursor: move;
 }
+
 #lily {
   top: 425px;
   position: absolute;
@@ -39,6 +44,7 @@
   text-align: center;
   cursor: move;
 }
+
 #poppy {
   top: 350px;
   position: absolute;
@@ -47,6 +53,40 @@
   cursor: move;
 }
 
+#roseM {
+  top: 125px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#tulipM {
+  top: 200px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#daisyM {
+  top: 275px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#lilyM {
+  top: 425px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#poppyM {
+  top: 350px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
 
 #mydivheader {
   padding: 10px;
