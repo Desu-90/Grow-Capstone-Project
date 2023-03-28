@@ -1,0 +1,75 @@
+* { user-select: none; }
+
+.item {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  color: white;
+  border: 0;
+}
+
+.icon:focus {
+  border: 1px solid rbg(0, 155, 255);
+}
+
+.ds-selected {
+  outline: 3px solid black;
+  outline-offset: 3px;
+  color: black;
+  font-weight: bold;
+}
+
+@for $i from 1 through 6 { 
+  .item:nth-child(#{$i}) {
+    background: hsla(random(360), 90%, 50%, 1);
+    top: 10px + random(70px) * 1%;
+    left: 10px + random(80px) * 1%;
+  }
+}
+#rose {
+    width: 100px;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    cursor: move;
+  }
+  
+  #tulip {
+    width: 100px;
+
+    top: 200px;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    cursor: move;
+  }
+  
+  #daisy {
+    width: 100px;
+
+    top: 275px;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    cursor: move;
+  }
+  
+  #lily {
+    width: 100px;
+
+    top: 425px;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    cursor: move;
+  }
+  
+  #poppy {
+    width: 100px;
+
+    top: 350px;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    cursor: move;
+  }

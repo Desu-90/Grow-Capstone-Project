@@ -7,36 +7,55 @@
   columns: 3 auto;
 }
 
-#canvas {
+.columns {
   position: relative;
+}
+
+#canvas {
   width: 400px;
+  left: 500px;
   top: 150px;
 }
 
-.front{
+.front {
   position: absolute;
-  top: 0;
+  pointer-events: none;
+  width: 300px;
+  top: 250px;
+  left: 650px;
   z-index: 100;
+  user-select: none;
+  caret-color: transparent;
+
 }
+
 .back {
   position: absolute;
-  top: 0;
+  pointer-events: none;
+  top: 250px;
+  width: 300px;
+  left: 650px;
+  user-select: none;
+  z-index: -99;
+  caret-color: transparent;
+
 }
 
 .layer {
   position: absolute;
   background: white;
-  top: 200px;
+  left: 650px;
+  top: 450px;
   z-index: 99;
-  height: 350px;
-  width: 400px;
-}
-
-#item{
-  border: 1px red solid;
+  height: 325px;
+  width: 300px;
+  user-select: none;
+  pointer-events: none;
+  caret-color: transparent;
 }
 
 #rose {
+  top: 125px;
   position: absolute;
   z-index: 9;
   text-align: center;
@@ -75,18 +94,7 @@
   cursor: move;
 }
 
-
-
-#mydivheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
-}
-
 #icon {
   width: 50px;
   height: 50px;
 }
-

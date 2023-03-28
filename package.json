@@ -4,6 +4,7 @@
   "description": "2023 Capstone",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Desu-90/My-Capstone-Project#readme",
   "devDependencies": {
     "interactjs": "^1.10.17"
+  },
+  "dependencies": {
+    "dragselect": "^2.7.3"
   }
 }
