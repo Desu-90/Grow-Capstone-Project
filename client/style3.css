@@ -1,75 +1,111 @@
-* { user-select: none; }
+.absolute {
+  position: absolute;
+  top: 80px;
+}
 
-.item {
+.content-box {
+  columns: 3 auto;
+}
+
+.columns {
+  position: relative;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  #draggable { grid-area: 1 / 1 / 6 / 4; }
+  #nav { grid-area: 1 / 4 / 2 / 7; }
+  #canvas { grid-area: 2 / 4 / 6 / 7; }
+
+#canvas {
+  width: 400px;
+  grid-area: 2 / 4 / 6 / 7;
+}
+
+.front {
+  position: absolute;
+  pointer-events: none;
+  width: 300px;
+  top: 250px;
+  left: 650px;
+  z-index: 100;
+  user-select: none;
+  caret-color: transparent;
+
+}
+
+.back {
+  position: absolute;
+  pointer-events: none;
+  top: 250px;
+  width: 300px;
+  left: 650px;
+  user-select: none;
+  z-index: -99;
+  caret-color: transparent;
+
+}
+
+.layer {
+  position: absolute;
+  background: white;
+  left: 650px;
+  top: 450px;
+  z-index: 99;
+  height: 325px;
+  width: 300px;
+  user-select: none;
+  pointer-events: none;
+  caret-color: transparent;
+}
+
+#rose {
+  top: 125px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  cursor: move;
+}
+
+#tulip {
+  top: 200px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  cursor: move;
+}
+
+#daisy {
+  top: 275px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  cursor: move;
+}
+
+#lily {
+  top: 425px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  cursor: move;
+}
+
+#poppy {
+  top: 350px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  cursor: move;
+}
+
+#icon {
   width: 50px;
   height: 50px;
-  position: absolute;
-  color: white;
-  border: 0;
 }
-
-.icon:focus {
-  border: 1px solid rbg(0, 155, 255);
-}
-
-.ds-selected {
-  outline: 3px solid black;
-  outline-offset: 3px;
-  color: black;
-  font-weight: bold;
-}
-
-@for $i from 1 through 6 { 
-  .item:nth-child(#{$i}) {
-    background: hsla(random(360), 90%, 50%, 1);
-    top: 10px + random(70px) * 1%;
-    left: 10px + random(80px) * 1%;
-  }
-}
-#rose {
-    width: 100px;
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    cursor: move;
-  }
-  
-  #tulip {
-    width: 100px;
-
-    top: 200px;
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    cursor: move;
-  }
-  
-  #daisy {
-    width: 100px;
-
-    top: 275px;
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    cursor: move;
-  }
-  
-  #lily {
-    width: 100px;
-
-    top: 425px;
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    cursor: move;
-  }
-  
-  #poppy {
-    width: 100px;
-
-    top: 350px;
-    position: absolute;
-    z-index: 9;
-    text-align: center;
-    cursor: move;
-  }
