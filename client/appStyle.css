@@ -1,0 +1,62 @@
+body,
+html {
+    overflow: hidden;
+    background-color: #FFFDFA;
+}
+
+.header {
+    font-size: 68px;
+    font-family: 'Shadows Into Light', cursive;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+hr {
+    border-top: 1px solid black;
+}
+
+#vase {
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+    transition: transform .2s ease-in;
+    draggable: false;
+}
+
+#vase:hover {
+    transform: scale(1.1);
+}
+
+#vase:active {
+    opacity: .8;
+}
+
+#paper {
+    position: absolute;
+    top: 15rem;
+    left: 50rem;
+    transition: transform .2s ease-in;
+}
+
+#paper:hover {
+    transform: scale(1.1);
+}
+
+#paper:active {
+    opacity: .8;
+}
+
+#mason {
+    position: absolute;
+    top: 15rem;
+    left: 85rem;
+    transition: transform .2s ease-in;
+}
+
+#mason:hover {
+    transform: scale(1.1);
+}
+
+#mason:active {
+    opacity: .8;
+}
