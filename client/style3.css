@@ -1,111 +1,86 @@
-.absolute {
-  position: absolute;
-  top: 80px;
-}
-
-.content-box {
-  columns: 3 auto;
+body,
+html {
+    overflow: hidden;
+    background-color: #FFFDFA;
 }
 
 .columns {
-  position: relative;
+    padding-top: 5em;
 }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  }
-  
-  #draggable { grid-area: 1 / 1 / 6 / 4; }
-  #nav { grid-area: 1 / 4 / 2 / 7; }
-  #canvas { grid-area: 2 / 4 / 6 / 7; }
+/* .header {
+    font-size: 68px;
+    font-family: 'Shadows Into Light', cursive;
+    padding-left: 150px;
+    padding-top: 20px;
+} */
 
-#canvas {
-  width: 400px;
-  grid-area: 2 / 4 / 6 / 7;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.front {
-  position: absolute;
-  pointer-events: none;
-  width: 300px;
-  top: 250px;
-  left: 650px;
-  z-index: 100;
-  user-select: none;
-  caret-color: transparent;
-
+.logo {
+    margin-right: 10px;
 }
 
-.back {
-  position: absolute;
-  pointer-events: none;
-  top: 250px;
-  width: 300px;
-  left: 650px;
-  user-select: none;
-  z-index: -99;
-  caret-color: transparent;
-
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 
-.layer {
-  position: absolute;
-  background: white;
-  left: 650px;
-  top: 450px;
-  z-index: 99;
-  height: 325px;
-  width: 300px;
-  user-select: none;
-  pointer-events: none;
-  caret-color: transparent;
+hr {
+    border-top: 1px solid black;
+    margin: 0;
 }
 
-#rose {
-  top: 125px;
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  cursor: move;
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons a {
+    margin: 0 10px;
 }
 
-#tulip {
-  top: 200px;
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  cursor: move;
+#vase {
+    height: 90%;
+    transition: transform .2s ease-in;
 }
 
-#daisy {
-  top: 275px;
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  cursor: move;
+#vase:hover {
+    transform: scale(1.1);
 }
 
-#lily {
-  top: 425px;
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  cursor: move;
+#vase:active {
+    opacity: .8;
 }
 
-#poppy {
-  top: 350px;
-  position: absolute;
-  z-index: 9;
-  text-align: center;
-  cursor: move;
+#paper {
+    height: 90%;
+    transition: transform .2s ease-in;
 }
 
-#icon {
-  width: 50px;
-  height: 50px;
+#paper:hover {
+    transform: scale(1.1);
+}
+
+#paper:active {
+    opacity: .8;
+}
+
+#mason {
+    height: 90%;
+    transition: transform .2s ease-in;
+}
+
+#mason:hover {
+    transform: scale(1.1);
+}
+
+#mason:active {
+    opacity: .8;
 }

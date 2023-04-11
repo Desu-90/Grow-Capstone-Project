@@ -6,82 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bloom</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="appStyle.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
     <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <div class="navbar-item">
-                    <div id="step" class="p-5 is-size-3">Step 1: Choose a Vase</div>
-                    <span class="icon-text">
-                        <button class="m-5 button is-rounded">
-                            <span class="icon mr-1">
-                                <i class="fas fa-arrow-rotate-left"></i>
-                            </span>Restart</button>
-                    </span>
-                    <span class="icon-text">
-                        <button class="button is-rounded">
-                            <span class="icon mr-1">
-                                <i class="fas fa-delete-left"></i>
-                            </span>Undo</button>
-                    </span>
-                </div>
-            </div>
-        </nav>
-        <section class="hero is-fullheight-with-navbar has-background-primary">
-            <div class="hero-body">
-                <div class="columns p-5">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image has-text-centered">
-                                <figure class="image is-inline-block p-5">
-                                    <a href="glass.html">
-                                        <img id="glass" src="/assets/glass.png">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="card-header-title is-centered">
-                                <div>Glass Vase</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image has-text-centered">
-                                <figure class="image is-inline-block p-5">
-                                    <a href="paper.html">
-                                        <img id="paper" src="/assets/paper.png">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="card-header-title is-centered">
-                                <div>Paper Vase</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image has-text-centered">
-                                <figure class="image is-inline-block p-5">
-                                    <a href="mason.html">
-                                        <img id="mason" src="/assets/mason.png">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="card-header-title is-centered">
-                                <div>Mason Vase</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="header">
+        <img src="/assets/logo.png" alt="logo">
+        <h1 class="title">Select a Vase</h1>
+        <div class="invisible"></div>
+    </div>
+      
+    <div class="buttons">
+        <a href="glass.html">
+            <img draggable='false' id="vase" src="/assets/vaseButton.png">
+        </a>
+        <a href="paper.html">
+            <img draggable='false' id="paper" src="/assets/paperButton.png">
+        </a>
+        <a href="canvas.html">
+            <img draggable='false' id="mason" src="/assets/masonButton.png">
+        </a>
+    </div>
 </body>
 
 </html>
