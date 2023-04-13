@@ -1,0 +1,26 @@
+html {
+    background: url('/assets/HomeBG.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+#title {
+    text-align: center;
+    margin-top: 250px;
+}
+
+#caption {
+    text-align: center;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#start {
+    margin-right: 10px;
+}
+
+#learn {
+    margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 body {
-    
+
     overflow: hidden;
 }
 
@@ -7,20 +7,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px; /* set a fixed height for the header */
-  }
-  
-  .title {
-    font-size: 68px;
-    font-family: 'Shadows Into Light', cursive;
+    height: 100px;
+    /* set a fixed height for the header */
+}
 
-  }
-  
+.title {
+    padding-right: 200px;
+}
 
+.logo {
+    padding-left: 50px;
+}
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
