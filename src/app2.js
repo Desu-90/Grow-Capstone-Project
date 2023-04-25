@@ -6,7 +6,6 @@ let flowers = document.querySelectorAll('#anemone, #aspen, #baby, #birch, #daisy
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     // otherwise, move the DIV from anywhere inside the DIV:
-    let originalElmnt = elmnt.cloneNode(true);
     let isCloned = false;
 
     function createClone(flower) {
@@ -72,33 +71,14 @@ function dragElement(elmnt) {
             }
         }
     }
-    // function closeDragElement() {
-    //     // stop moving when mouse button is released:
-    // document.onpointerup = null;
-    // document.onpointermove = null;
-    //     const canvas = document.querySelector('#canvas');
-    //     canvas.append(elmnt);
 
-    //     const clone = elmnt.cloneNode(true);
-    //     const draggable = document.querySelector('#draggable');
-    //     draggable.append(clone);
-    //     dragElement(clone);
-    //     // const item = document.createElement();
-    //     // item.innerHTML = '<span id="mydiv"><img id="icon" src="../assets/rose.png"><p>Rose</p>'
-    //     console.log("dropped");
-    //     // const selection = document.querySelector("#mydiv");
-    //     // const item = document.createElement('img');
-    //     // item.setAttribute("id", "mydiv");
-    //     // item.src = '../assets/rose.png';
-    //     // selection.parentNode.replaceChild(item, selection);
-    // }
     function closeDragElement() {
         document.onpointerup = null;
         document.onpointermove = null;
         canvas.append(elmnt);
         let zIndex = elmnt.style.zIndex;
         zIndex = -98;
-        zIndex --;
+        zIndex--;
         // randomizes z-index but it's kind of annoying, keeping jic
         // const zIndex = Math.floor(Math.random() * 98) + 1;
         // elmnt.style.zIndex = zIndex;
@@ -113,12 +93,11 @@ function dragElement(elmnt) {
         //     elmnt.style.zIndex = (maxZIndex - 1).toString();
         // elmnt.style.zIndex = zIndex
 
-        }
-
-        elmnt.onpointerdown = dragMouseDown;
-
     }
 
-    flowers.forEach(flower => {
-        dragElement(flower);
-    });
+    elmnt.onpointerdown = dragMouseDown;
+}
+
+flowers.forEach(flower => {
+    dragElement(flower);
+});

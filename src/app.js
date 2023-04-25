@@ -98,7 +98,7 @@ function dragElement(elmnt) {
         canvas.append(elmnt);
         let zIndex = elmnt.style.zIndex;
         zIndex = -98;
-        zIndex --;
+        zIndex--;
         // randomizes z-index but it's kind of annoying, keeping jic
         // const zIndex = Math.floor(Math.random() * 98) + 1;
         // elmnt.style.zIndex = zIndex;
@@ -113,12 +113,18 @@ function dragElement(elmnt) {
         //     elmnt.style.zIndex = (maxZIndex - 1).toString();
         // elmnt.style.zIndex = zIndex
 
-        }
-
-        elmnt.onpointerdown = dragMouseDown;
-
     }
 
-    flowers.forEach(flower => {
-        dragElement(flower);
-    });
+    elmnt.onpointerdown = dragMouseDown;
+
+}
+
+
+
+
+
+
+
+flowers.forEach(flower => {
+    dragElement(flower);
+});

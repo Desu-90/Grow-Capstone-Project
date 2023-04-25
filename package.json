@@ -21,6 +21,7 @@
     "interactjs": "^1.10.17"
   },
   "dependencies": {
-    "dragselect": "^2.7.3"
+    "dragselect": "^2.7.3",
+    "html2canvas": "^1.4.1"
   }
 }
