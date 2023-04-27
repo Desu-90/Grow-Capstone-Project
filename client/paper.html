@@ -1,94 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bloom</title>
-  <link rel="stylesheet" href="canvasStyle.css">
-  <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <script src="https://kit.fontawesome.com/0155c406ef.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="appStyle.css">
+  <title>Title of the document</title>
+
 </head>
 
 <body>
-  <div class="columns">
-    <div class="column">
-      <div class="header">
-        <a href="./client.html">
-          <img class="logo" src="../assets/logo.png">
-        </a>
+  <div id="draggsable">
+    <div class="header">
+    <a href="./client.html">
+      <img class="logo" src="../assets/logo.png">
+    </a>
+  </div>
+    <div class="container">
+      <div id="menu" class="box has-scrollbars is-4by7" style="height: 800px; overflow-y: scroll;">
+        <div id="draggable" class="columns is-mobile is-centered is-multiline"
+          style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <div id="anemone" class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <img id="icon" src="../assets/flower_buttons/anemone_box.png">
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="aspen">
+              <img id="icon" src="../assets/flower_buttons/aspenLeaf_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="babys">
+              <img id="icon" src="../assets/flower_buttons/babysBreath_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="bell">
+              <img id="icon" src="../assets/flower_buttons/bellflower_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="birch">
+              <img id="icon" src="../assets/flower_buttons/birchLeaf_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="calla">
+              <img id="icon" src="../assets/flower_buttons/callaLilly_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="carnation">
+              <img id="icon" src="../assets/flower_buttons/carnation_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="daisy">
+              <img id="icon" src="../assets/flower_buttons/daisy_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="daphodile">
+              <img id="icon" src="../assets/flower_buttons/daphodile_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="delphinium">
+              <img id="icon" src="../assets/flower_buttons/delphinium_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="green">
+              <img id="icon" src="../assets/flower_buttons/greenLeaves_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="hydrangea">
+              <img id="icon" src="../assets/flower_buttons/hydrangea_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="lilly">
+              <img id="icon" src="../assets/flower_buttons/lilly_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="merigold">
+              <img id="icon" src="../assets/flower_buttons/merigold_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="million">
+              <img id="icon" src="../assets/flower_buttons/millionBells_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="palma">
+              <img id="icon" src="../assets/flower_buttons/palmaLeaf_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="poppy">
+              <img id="icon" src="../assets/flower_buttons/poppy_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="rose">
+              <img id="icon" src="../assets/flower_buttons/roseBuds_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="sunflower">
+              <img id="icon" src="../assets/flower_buttons/sunflower_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="tulip">
+              <img id="icon" src="../assets/flower_buttons/tulip_box.png">
+            </span>
+          </div>
+          <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
+            style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
+            <span id="violet">
+              <img id="icon" src="../assets/flower_buttons/Violet_box.png">
+            </span>
+          </div>
+        </div>
       </div>
-      <!-- Draggable DIV -->
-      <div id="draggable">
-        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-        <!-- <span id="rose">
-            <img id="icon" src="../assets/rose.png">
-          </span> -->
-        <span id="anemone">
-          <img id="icon" src="../assets/flower_buttons/Anemone_box.png">
-        </span>
-        <span id="aspen">
-          <img id="icon" src="../assets/flower_buttons/AspenLeaf_box.png">
-        </span>
-        <span id="baby">
-          <img id="icon" src="../assets/flower_buttons/BabysBreath_box.png">
-        </span>
-        <span id="birch">
-          <img id="icon" src="../assets/flower_buttons/BirchLeaf_box.png">
-        </span>
-        <span id="daisy">
-          <img id="icon" src="../assets/flower_buttons/Daisy_box.png">
-        </span>
-        <span id="delphinium">
-          <img id="icon" src="../assets/flower_buttons/Delphinium_box.png">
-        </span>
-        <span id="lilly">
-          <img id="icon" src="../assets/flower_buttons/Lilly_box.png">
-        </span>
-        <span id="merigold">
-          <img id="icon" src="../assets/flower_buttons/Merigold_box.png">
-        </span>
-        <span id="palma">
-          <img id="icon" src="../assets/flower_buttons/PalmaLeaf_box.png">
-        </span>
-        <span id="poppy">
-          <img id="icon" src="../assets/flower_buttons/Poppy_box.png">
-        </span>
-        <span id="sunflower">
-          <img id="icon" src="../assets/flower_buttons/Sunflower_box.png">
-        </span>
-        <span id="tulip">
-          <img id="icon" src="../assets/flower_buttons/Tulip_box.png">
-        </span>
-        <span id="violet">
-          <img id="icon" src="../assets/flower_buttons/Violet_box.png">
-        </span>
+
+      <div class='canvas'>
+        <div id="canvas-header">
+
+          <div id="back">
+            <a href="./app.html">
+            <img src="../assets/Nav Button-1.png">
+          </a>
+          </div>
+          <div id="info">
+            <img src="../assets/info icon.png">
+          </div>
+          <div id="restart">
+            <a href="./paper.html">
+            <img src="../assets/Nav Button.png">
+          </a>
+          </div>
+          
+
+          <div id="trash">
+            <img src="../assets/trash.png">
+          </div>
+        </div>
+        <div id="canvas-content">
+          <img src="../assets/paper.png">
+        </div>
+        <div id="canvas-footer">
+          <div id="send">
+            <img src="../assets/Nav Button-2.png">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="column">
-      <div id="restart">
-        <img src="../assets/Nav Button.png">
-      </div>
-      <div id="back">
-        <img src="../assets/Nav Button-1.png">
-      </div>
-      <div id="info">
-        <img src="../assets/info icon.png">
-      </div>
-      <div id="trash">
-        <img src="../assets/trash.png">
-      </div>
-      <div id="send">
-        <img src="../assets/Nav Button-2.png">
-      </div>
-      <div id="canvas">
-        <img class="back" src="../assets/paper_back.png">
-        <img class="front" src="../assets/paper_top.png">
-        <div class="layer"></div>
-      </div>
+
     </div>
   </div>
-  <script type="module" src="../src/app2.js"></script>
+
+
+  <script src="../src/html2canvas.min.js"></script>
+  <script type="module" src="../src/app.js"></script>
 </body>
+
+</html>
