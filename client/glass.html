@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="appStyle.css">
-  <title>Title of the document</title>
-
+  <title>Bloom</title>
+  <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="draggsable">
+  <div id="main">
     <div class="header">
     <a href="./client.html">
       <img class="logo" src="../assets/logo.png">
@@ -21,7 +24,7 @@
           style="display: flex; flex-wrap: wrap; justify-content: center;">
           <div id="anemone" class="column is-one-third-desktop is-4-mobile is-4-tablet"
             style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
-            <img id="anemoene" src="../assets/flower_buttons/anemone_box.png">
+            <img id="icon" src="../assets/flower_buttons/anemone_box.png">
           </div>
           <div class="column is-one-third-desktop is-4-mobile is-4-tablet"
             style="flex-basis: calc(33.33% - 1rem); margin: 0.5rem;">
@@ -158,9 +161,7 @@
             <img src="../assets/info icon.png">
           </div>
           <div id="restart">
-            <a href="./glass.html">
             <img src="../assets/Nav Button.png">
-          </a>
           </div>
           
 
@@ -177,9 +178,15 @@
           </div>
         </div>
       </div>
-
     </div>
-  </div>
+
+    <div id="infoTT" class="box" style="height: 550px;">
+      <img id="exitTT" src="../assets/Arrow.png">
+      <div id="text">
+        <img id="textImg" src="../assets/infoTT.png">
+      </div>
+    </div>
+
 
 
   <script src="../src/html2canvas.min.js"></script>

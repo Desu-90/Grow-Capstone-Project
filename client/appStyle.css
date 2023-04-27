@@ -155,3 +155,25 @@ body {
 #item {
   width: 150px;
 }
+
+#infoTT {
+  position: absolute;
+  top: 20%;
+  left: 57%;
+  width: 550px;
+}
+
+#exitTT {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+
+#info {
+  cursor: pointer;
+}
+
+#send {
+  cursor: pointer;
+}

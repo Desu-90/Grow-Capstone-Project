@@ -1,9 +1,11 @@
-
-let draggable = document.querySelector("#draggable");
-let canvas = document.querySelector("#canvas-content");
-let flowers = document.querySelectorAll('#anemone, #aspen, #babys, #bell, #birch, #calla, #carnation, #daisy, #daphodile, #delphinium, #green, #hydrangea, #lilly, #merigold, #million, #palma, #poppy, #rose, #sunflower, #tulip, #violet');
-let trash = document.querySelector('#trash');
+const canvas = document.querySelector("#canvas-content");
+const flowers = document.querySelectorAll('#anemone, #aspen, #babys, #bell, #birch, #calla, #carnation, #daisy, #daphodile, #delphinium, #green, #hydrangea, #lilly, #merigold, #million, #palma, #poppy, #rose, #sunflower, #tulip, #violet');
+const trash = document.querySelector('#trash');
 const exportBtn = document.querySelector('#send');
+const toolTipButton = document.querySelector('#info');
+const closeToolTip = document.querySelector('#exitTT');
+const toolTip = document.querySelector('#infoTT');
+const restartButton = document.querySelector('#restart')
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     // otherwise, move the DIV from anywhere inside the DIV:
@@ -165,8 +167,6 @@ flowers.forEach(flower => {
     dragElement(flower);
 });
 
-
-
 exportBtn.addEventListener('click', () => {
     // Use html2canvas to export the div to an image
     html2canvas(document.querySelector("#canvas-content")).then(canvas => {
@@ -176,4 +176,24 @@ exportBtn.addEventListener('click', () => {
         // Append the Image element to the body of the page
         document.body.appendChild(img);
     });
+});
+
+closeToolTip.addEventListener('click', () => {
+    toolTip.style.display = 'none';
+})
+
+toolTipButton.addEventListener('click', () => {
+    toolTip.style.display = 'inline'
+})
+
+restartButton.addEventListener('click', () => {
+    if(window.location.href === 'http://127.0.0.1:5500/client/paper.html'){
+        canvas.innerHTML = '<img src="../assets/paper.png">'
+    }
+    if(window.location.href === 'http://127.0.0.1:5500/client/mason.html'){
+        canvas.innerHTML = '<img src="../assets/mason.png">'
+    }
+    if(window.location.href === 'http://127.0.0.1:5500/client/glass.html'){
+        canvas.innerHTML = '<img src="../assets/glass.png">'
+    }
 });
