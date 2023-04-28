@@ -167,16 +167,30 @@ flowers.forEach(flower => {
     dragElement(flower);
 });
 
-exportBtn.addEventListener('click', () => {
-    // Use html2canvas to export the div to an image
-    html2canvas(document.querySelector("#canvas-content")).then(canvas => {
-        // Create an Image element and set its src to the canvas data URL
-        var img = new Image();
-        img.src = canvas.toDataURL();
-        // Append the Image element to the body of the page
-        document.body.appendChild(img);
+const LOCAL_STORAGE_KEY = 'myImage'
+
+if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href === 'http://127.0.0.1:5500/client/mason.html' || window.location.href === 'http://127.0.0.1:5500/client/glass.html') {
+    exportBtn.addEventListener('click', () => {
+        // Use html2canvas to export the div to an image
+        html2canvas(document.querySelector("#canvas-content")).then(canvas => {
+            // Create an Image element and set its src to the canvas data URL
+            let img = new Image();
+            img.src = canvas.toDataURL();
+            localStorage.setItem(LOCAL_STORAGE_KEY, img.src);
+            // Append the Image element to the body of the page
+            window.location.href = "../client/mail.html";
+        });
     });
-});
+}
+
+window.addEventListener('load', () => {
+    const savedImgSrc = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/mail.html') {
+        const img = new Image();
+        img.src = savedImgSrc;
+        document.body.appendChild(img);
+    }
+})
 
 closeToolTip.addEventListener('click', () => {
     toolTip.style.display = 'none';
