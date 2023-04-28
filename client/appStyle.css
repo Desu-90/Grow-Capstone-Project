@@ -177,3 +177,27 @@ body {
 #send {
   cursor: pointer;
 }
+
+#layer {
+    position: absolute;
+    background: white;
+    left: 650px;
+    top: 450px;
+    z-index: -1;
+    height: 350px;
+    width: 400px;
+    border: 1px solid red;
+}
+
+#paperB {
+  position: absolute;
+  width: 383px;
+  pointer-events: none;
+}
+
+#paperF {
+  position: absolute;
+  width: 383px;
+  z-index: 99;
+  pointer-events: none;
+}

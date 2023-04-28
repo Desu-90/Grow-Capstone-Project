@@ -186,9 +186,10 @@ if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window
 window.addEventListener('load', () => {
     const savedImgSrc = localStorage.getItem(LOCAL_STORAGE_KEY);
     if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/mail.html') {
+        const exportedImg = document.querySelector('#savedImg');
         const img = new Image();
         img.src = savedImgSrc;
-        document.body.appendChild(img);
+        exportedImg.appendChild(img);
     }
 })
 
