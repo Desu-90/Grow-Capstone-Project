@@ -47,3 +47,17 @@ h1 {
 #restart:active{
     filter: brightness(.8);
 }
+
+#scan{
+    position: absolute;
+    right: 346px;
+    bottom: 142px;
+    width: 277px;
+}
+
+#qrCode {
+    position: absolute;
+    width: 250px;
+    right: 50px;
+    bottom: 50px;
+}
