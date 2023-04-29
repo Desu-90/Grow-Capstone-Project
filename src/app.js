@@ -184,7 +184,7 @@ flowers.forEach(flower => {
 
 const LOCAL_STORAGE_KEY = 'myImage';
 
-if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href === 'http://127.0.0.1:5500/client/mason.html' || window.location.href === 'http://127.0.0.1:5500/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/paper.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/mason.html' || window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/glass.html') {
+if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href === 'http://127.0.0.1:5500/client/mason.html' || window.location.href === 'http://127.0.0.1:5500/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/paper.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/mason.html' || window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/paper.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/mason.html') {
     exportBtn.addEventListener('click', () => {
         // Use html2canvas to export the div to an image
         html2canvas(document.querySelector("#canvas-content"), {backgroundColor:null, width: 1200, height: 800}).then(canvas => {
@@ -233,17 +233,17 @@ toolTipButton.addEventListener('click', () => {
 })
 
 restartButton.addEventListener('click', () => {
-    if(window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/paper.html'){
+    if(window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/paper.html'|| window.location.href == 'https://people.rit.edu/~dao9631/Capstone/My-Capstone-Project/client/paper.html'){
         const image1HTML = '<img id="paperB" src="../assets/paper_back.png">'
         const image2HTML = '<img id="paperF" src="../assets/paper_top.png">'
         canvas.innerHTML = image1HTML + image2HTML
     }
-    if(window.location.href === 'http://127.0.0.1:5500/client/mason.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/mason.html'){
+    if(window.location.href === 'http://127.0.0.1:5500/client/mason.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/mason.html'|| window.location.href == 'https://people.rit.edu/~dao9631/Capstone/My-Capstone-Project/client/mason.html'){
         const image1HTML = '<img id="masonB" src="../assets/mason_back.png">'
         const image2HTML = '<img id="masonF" src="../assets/mason_front.png">'
         canvas.innerHTML = image1HTML + image2HTML
     }
-    if(window.location.href === 'http://127.0.0.1:5500/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/glass.html'){
+    if(window.location.href === 'http://127.0.0.1:5500/client/glass.html'|| window.location.href == 'https://people.rit.edu/dao9631/Capstone/My-Capstone-Project/client/glass.html'|| window.location.href == 'https://people.rit.edu/~dao9631/Capstone/My-Capstone-Project/client/glass.html'){
         const image1HTML = '<img id="glassB" src="../assets/vase_back.png">'
         const image2HTML = '<img id="glassF" src="../assets/vase_front.png">'
         canvas.innerHTML = image1HTML + image2HTML
