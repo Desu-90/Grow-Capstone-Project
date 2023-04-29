@@ -72,7 +72,7 @@ h1 {
 
 }
 
-#confirm {
+#send {
     float: right;
     cursor: pointer;
     position: absolute;
@@ -82,12 +82,12 @@ h1 {
     padding-top: 82px;
 }
   
-  #confirm:hover {
+  #send:hover {
     filter: brightness(0.8);
   
   }
   
-  #confirm:active {
+  #send:active {
     filter: brightness(0.5)
   }
   #formBox {
@@ -117,4 +117,44 @@ textarea {
   
   #edit:active {
     filter: brightness(0.5)
+  }
+
+  #back {
+    position: absolute;
+    z-index: -1;
+    width: 1200px;
+  }
+
+  #box {
+    position: absolute;
+    width: 500px;
+    height: 301px;
+    top: 316px;
+    border: solid;
+    left: 570px;
+  }
+
+  #savedImg {
+    position: absolute;
+    left: -160px;
+    bottom: 146px;
+  }
+
+  #letter {
+    position: absolute;
+    width: 1200px;
+    height: 721px;
+    top: 264px;
+    left: 50px;
+    border: solid;
+  }
+
+  #nextAct {
+    position: absolute;
+    top: 300px;
+    right: 350px;
+  }
+
+  #or {
+    text-align: center;
   }

@@ -5,36 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom</title>
-    <link rel="stylesheet" type="text/css" href="appStyle.css">
+    <link rel="stylesheet" type="text/css" href="mail.css">
     <script src="../src/app.js"></script>
-
 </head>
 
 <body>
+    <div id="window">
+        <img id="bg" src="../assets/mail_background.png">
+    </div>
     <div class="header">
         <a href="./client.html">
             <img class="logo" src="../assets/logo.png" alt="logo">
         </a>
         <div id="edit">
-            <img src="../assets/EditB.png">
+            <a href="../client/app.html">
+                <img src="../assets/EditB.png">
+                </a>
         </div>
 
         <div class="invisible"></div>
     </div>
-    <div class="container">
+    <div id="container">
         <div id="savedImg">
-            
+
         </div>
-        <div class='form'>
+        <div class='form' id="formBox">
             <h1>Write a Message</h1>
             <h2>Who is this for?</h2>
-            <input type="text">
+            <input placeholder="Mom" class="short" type="text">
             <h2>What do you want to say</h2>
-            <input type="text">
+            <textarea rows="8" cols="61" placeholder="Here are some flowers..."></textarea>
             <h2>Who is this from?</h2>
-            <input type="text">
+            <input placeholder="..." class="short" type="text">
         </div>
+        <div id="confirm">
+            <a href="../client/confirm.html">
+            <img src="../assets/Nav Button-2.png">
+            </a>
+          </div>
     </div>
+    <script src="../src/confirm.js"></script>
 </body>
 
 </html>

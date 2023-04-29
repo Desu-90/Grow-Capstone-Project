@@ -3,13 +3,14 @@ body {
   user-select: none;
   overflow: hidden;
 }
+
 .box {
-    width: 40%;
-    padding: 20px;
-    direction: rtl;
-    float: left;
-  }
-  
+  width: 40%;
+  padding: 20px;
+  direction: rtl;
+  float: left;
+}
+
 #menu {
   margin-top: 5%;
 }
@@ -18,47 +19,47 @@ body {
   cursor: move;
 }
 
-.header{
+.header {
   position: absolute;
   top: 2%;
   left: 2%;
 }
 
 
-  .grid-image {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-  }
+.grid-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
 
-  .grid-image:hover {
-    cursor: move;
-  }
-  
-  .box.has-scrollbars {
-    position: relative;
-    overflow: hidden;
-    margin-left: 30px;
-  }
-  
-  .box.has-scrollbars::-webkit-scrollbar {
-    width: 7px;
-    
-  }
-  
-  .box.has-scrollbars::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 7px;
-    
-  }
-  
-  .box.has-scrollbars .columns {
-    margin-left: -8px;
-    margin-right: 0;
-    padding-right: 40px;
-  }
-  
-  .box.has-scrollbars::-webkit-scrollbar-track {
+.grid-image:hover {
+  cursor: move;
+}
+
+.box.has-scrollbars {
+  position: relative;
+  overflow: hidden;
+  margin-left: 30px;
+}
+
+.box.has-scrollbars::-webkit-scrollbar {
+  width: 7px;
+
+}
+
+.box.has-scrollbars::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 7px;
+
+}
+
+.box.has-scrollbars .columns {
+  margin-left: -8px;
+  margin-right: 0;
+  padding-right: 40px;
+}
+
+.box.has-scrollbars::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -74,15 +75,15 @@ body {
   background-color: #aaa;
 }
 
-.canvas{
+.canvas {
   margin-left: 45%;
   background: url('../assets/vaseBG.png') no-repeat center center fixed;
   background-size: cover;
-  height: 1000px;
-  
+  height: 1180px;
+
 }
 
-#restart{
+#restart {
   float: right;
   padding-left: 50px;
   padding-top: 50px;
@@ -130,17 +131,22 @@ body {
 #trash {
   overflow: hidden;
   padding-top: 30px;
-  margin-left: 973px;
+  margin-left: 1147px;
 }
 
 #canvas-content {
-  padding-top: 5%;
-  padding-left: 30%;
+  width: 600px;
+  height: 800px;
+  padding-left: 25%;
+
 }
+
 
 #send {
   float: right;
-  padding-right: 30px;
+  cursor: pointer;
+  padding-right: 60px;
+  padding-top: 82px;
 }
 
 #send:hover {
@@ -158,9 +164,10 @@ body {
 
 #infoTT {
   position: absolute;
-  top: 20%;
-  left: 57%;
+  top: 25%;
+  left: 59%;
   width: 550px;
+  z-index: 10;
 }
 
 #exitTT {
@@ -174,30 +181,88 @@ body {
   cursor: pointer;
 }
 
-#send {
-  cursor: pointer;
+
+
+#layerLeft {
+  position: absolute;
+  visibility: hidden;
+  right: 737px;
+  top: 439px;
+  z-index: 1;
+  height: 360px;
+  width: 86px;
+
 }
 
-#layer {
-    position: absolute;
-    background: white;
-    left: 650px;
-    top: 450px;
-    z-index: -1;
-    height: 350px;
-    width: 400px;
-    border: 1px solid red;
+#layerMid {
+  position: absolute;
+  visibility: hidden;
+  right: 514px;
+  top: 439px;
+  z-index: 1;
+  height: 360px;
+  width: 311px;
+}
+
+#layerRight {
+  position: absolute;
+  visibility: hidden;
+  right: 455px;
+  top: 439px;
+  z-index: -1;
+  height: 360px;
+  width: 86px;
 }
 
 #paperB {
   position: absolute;
   width: 383px;
+  right: 450px;
+  top: 355px;
   pointer-events: none;
 }
 
 #paperF {
   position: absolute;
   width: 383px;
-  z-index: 99;
+  right: 450px;
+  top: 355px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#masonB {
+  position: absolute;
+  width: 383px;
+  right: 450px;
+  top: 430px;
+  pointer-events: none;
+}
+
+#masonF {
+  position: absolute;
+  width: 383px;
+  right: 450px;
+  top: 430px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#glassB {
+  position: absolute;
+  height: 650px;
+  width: 350px;
+  right: 450px;
+  top: 355px;
+  pointer-events: none;
+}
+
+#glassF {
+  position: absolute;
+  height: 650px;
+  width: 350px;
+  right: 450px;
+  top: 355px;
+  z-index: 9;
   pointer-events: none;
 }

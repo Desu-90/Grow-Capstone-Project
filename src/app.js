@@ -6,6 +6,7 @@ const toolTipButton = document.querySelector('#info');
 const closeToolTip = document.querySelector('#exitTT');
 const toolTip = document.querySelector('#infoTT');
 const restartButton = document.querySelector('#restart')
+const confirmBtton= document.querySelector('#confirm');
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     // otherwise, move the DIV from anywhere inside the DIV:
@@ -167,12 +168,12 @@ flowers.forEach(flower => {
     dragElement(flower);
 });
 
-const LOCAL_STORAGE_KEY = 'myImage'
+const LOCAL_STORAGE_KEY = 'myImage';
 
 if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window.location.href === 'http://127.0.0.1:5500/client/mason.html' || window.location.href === 'http://127.0.0.1:5500/client/glass.html') {
     exportBtn.addEventListener('click', () => {
         // Use html2canvas to export the div to an image
-        html2canvas(document.querySelector("#canvas-content")).then(canvas => {
+        html2canvas(document.querySelector("#canvas-content"), {backgroundColor:null, width: 1200, height: 800}).then(canvas => {
             // Create an Image element and set its src to the canvas data URL
             let img = new Image();
             img.src = canvas.toDataURL();
@@ -183,12 +184,17 @@ if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window
     });
 }
 
+
+
 window.addEventListener('load', () => {
     const savedImgSrc = localStorage.getItem(LOCAL_STORAGE_KEY);
     if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/mail.html') {
         const exportedImg = document.querySelector('#savedImg');
         const img = new Image();
         img.src = savedImgSrc;
+        img.style.width = '850px';
+        img.style.paddingTop = '250px'
+        img.setAttribute('id', 'export');
         exportedImg.appendChild(img);
     }
 })
@@ -203,12 +209,12 @@ toolTipButton.addEventListener('click', () => {
 
 restartButton.addEventListener('click', () => {
     if(window.location.href === 'http://127.0.0.1:5500/client/paper.html'){
-        canvas.innerHTML = '<img src="../assets/paper.png">'
+        canvas.innerHTML = '<img id="vase" src="../assets/paper.png">'
     }
     if(window.location.href === 'http://127.0.0.1:5500/client/mason.html'){
-        canvas.innerHTML = '<img src="../assets/mason.png">'
+        canvas.innerHTML = '<img "vase" src="../assets/mason.png">'
     }
     if(window.location.href === 'http://127.0.0.1:5500/client/glass.html'){
-        canvas.innerHTML = '<img src="../assets/glass.png">'
+        canvas.innerHTML = '<img "vase" src="../assets/glass.png">'
     }
 });
