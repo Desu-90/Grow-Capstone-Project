@@ -1,6 +1,7 @@
 body {
   caret-color: transparent;
   user-select: none;
+  overflow: hidden;
 }
 
 .box {

@@ -211,7 +211,7 @@ if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window
 
 window.addEventListener('load', () => {
     const savedImgSrc = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/end.html') {
+    if(savedImgSrc) {
         const exportedImg = document.querySelector('#savedImg');
         const randomIndex = Math.floor(Math.random() * quotes.length);
         const selectedQuote = quotes[randomIndex]
@@ -234,12 +234,18 @@ toolTipButton.addEventListener('click', () => {
 
 restartButton.addEventListener('click', () => {
     if(window.location.href === 'http://127.0.0.1:5500/client/paper.html'){
-        canvas.innerHTML = '<img id="vase" src="../assets/paper.png">'
+        const image1HTML = '<img id="paperB" src="../assets/paper_back.png">'
+        const image2HTML = '<img id="paperF" src="../assets/paper_top.png">'
+        canvas.innerHTML = image1HTML + image2HTML
     }
     if(window.location.href === 'http://127.0.0.1:5500/client/mason.html'){
-        canvas.innerHTML = '<img "vase" src="../assets/mason.png">'
+        const image1HTML = '<img id="masonB" src="../assets/mason_back.png">'
+        const image2HTML = '<img id="masonF" src="../assets/mason_front.png">'
+        canvas.innerHTML = image1HTML + image2HTML
     }
     if(window.location.href === 'http://127.0.0.1:5500/client/glass.html'){
-        canvas.innerHTML = '<img "vase" src="../assets/glass.png">'
+        const image1HTML = '<img id="glassB" src="../assets/vase_back.png">'
+        const image2HTML = '<img id="glassF" src="../assets/vase_front.png">'
+        canvas.innerHTML = image1HTML + image2HTML
     }
 });
