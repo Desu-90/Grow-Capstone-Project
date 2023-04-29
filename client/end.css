@@ -1,0 +1,49 @@
+body, html {
+    caret-color: transparent;
+    user-select: none;
+    font-family: 'Shadows';
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-image: url('../assets/mail_background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#logoButton {
+    position: absolute;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+@font-face {
+    font-family: 'Shadows';
+    src: url('../assets//Shadows_Into_Light/ShadowsIntoLight-Regular.ttf');
+}
+
+h1 {
+    font-family: 'Shadows';
+    font-size: 64px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+#savedImg {
+    text-align: center;
+}
+
+#another {
+    text-align: center;
+    padding-top: 2%;
+}
+
+#restart:hover{
+    filter: brightness(.9);
+}
+
+#restart:active{
+    filter: brightness(.8);
+}

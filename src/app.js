@@ -6,7 +6,21 @@ const toolTipButton = document.querySelector('#info');
 const closeToolTip = document.querySelector('#exitTT');
 const toolTip = document.querySelector('#infoTT');
 const restartButton = document.querySelector('#restart')
-const confirmBtton= document.querySelector('#confirm');
+
+const quotes = [
+    "Beautifully arranged blooms, well done!",
+    "Your flower arrangement is simply stunning!",
+    "What a stunning display of flowers, congratulations!",
+    "Congratulations on creating such a beautiful arrangement.",
+    "Your flower arrangement is truly magnificent!",
+    "Well done on creating such a beautiful floral masterpiece!",
+    "Amazing work! Your flower arrangement is simply beautiful!",
+    "Congratulations on creating such a stunning arrangement of flowers.",
+    "Your talent for flower arrangement is impressive!",
+    "A stunning display of flowers, well done!",
+  ];
+const title = document.querySelector('#title');
+
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     // otherwise, move the DIV from anywhere inside the DIV:
@@ -179,7 +193,16 @@ if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window
             img.src = canvas.toDataURL();
             localStorage.setItem(LOCAL_STORAGE_KEY, img.src);
             // Append the Image element to the body of the page
-            window.location.href = "../client/mail.html";
+            window.location.href = "../client/end.html";
+
+            let link = document.createElement('a');
+            link.href = canvas.toDataURL();
+            link.download = 'flower.png';
+
+            // Trigger a click event on the link to download the image
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     });
 }
@@ -188,12 +211,14 @@ if (window.location.href === 'http://127.0.0.1:5500/client/paper.html' || window
 
 window.addEventListener('load', () => {
     const savedImgSrc = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/mail.html') {
+    if(savedImgSrc && window.location.href === 'http://127.0.0.1:5500/client/end.html') {
         const exportedImg = document.querySelector('#savedImg');
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const selectedQuote = quotes[randomIndex]
+        title.innerHTML = selectedQuote;
         const img = new Image();
         img.src = savedImgSrc;
         img.style.width = '850px';
-        img.style.paddingTop = '250px'
         img.setAttribute('id', 'export');
         exportedImg.appendChild(img);
     }

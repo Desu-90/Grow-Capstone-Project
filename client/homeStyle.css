@@ -2,11 +2,14 @@ html {
     background: url('../assets/HomeBG.png') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+    caret-color: transparent;
+    user-select: none;
+    overflow: hidden;
 }
 
 #title {
     text-align: center;
-    margin-top: 250px;
+    margin-top: 15%;
 }
 
 #caption {
@@ -18,9 +21,29 @@ html {
 }
 
 #start {
-    margin-right: 10px;
+    margin-right: .5%;
 }
 
 #learn {
     margin-left: 10px;
+}
+
+#start:hover {
+    filter: brightness(.9);
+}
+
+#start:active {
+    filter: brightness(.8);
+}
+
+#learn:hover {
+    border-radius: 35px;
+    background-color: rgb(255, 255, 255);
+    filter: brightness(.9);
+}
+
+#learn:active {
+    border-radius: 35px;
+    background-color: white;
+    filter: brightness(.8);
 }
